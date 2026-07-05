@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: #4F46E5;
+  --color-accent-hover: #4338CA;
+  --color-accent-light: rgba(79, 70, 229, 0.08);
+
+  --color-bg-main: var(--bg-main);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-sidebar: var(--bg-sidebar);
+  --color-bg-sidebar-hover: var(--bg-sidebar-hover);
+  --color-bg-card: var(--bg-card);
+  --color-bg-card-secondary: var(--bg-card-secondary);
+  --color-bg-input: var(--bg-input);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-border: var(--border-color);
+  --color-border-light: var(--border-light);
+
+  --color-success: #10B981;
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #0EA5E9;
+  
+  --font-sans: var(--font-inter);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-main: #F5F7FB;
+  --bg-secondary: #EEF2F7;
+  --bg-sidebar: #0F172A;
+  --bg-sidebar-hover: #1E293B;
+  --bg-card: #FFFFFF;
+  --bg-card-secondary: #F8FAFC;
+  --bg-input: #F8FAFC;
+
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+
+  --border-color: #E2E8F0;
+  --border-light: #F1F5F9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="dark"] {
+  --bg-main: #0B1220;
+  --bg-secondary: #111827;
+  --bg-sidebar: #08111F;
+  --bg-sidebar-hover: #172554;
+  --bg-card: #182235;
+  --bg-card-secondary: #222F47;
+  --bg-input: #111C30;
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+
+  --border-color: #2B3952;
+  --border-light: #374863;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  margin: 0;
+  padding: 0;
 }
